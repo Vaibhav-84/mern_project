@@ -1,8 +1,14 @@
+require('dotenv').config()
 const mongoose = require("mongoose");
 const express = require("express");
 const app = express();
-require('dotenv').config()
+const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
+const authRoutes = require("./routes/auth");
+
+//DBconnection
 mongoose.connect(process.env.DATABASE, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -13,8 +19,16 @@ mongoose.connect(process.env.DATABASE, {
     console.log("Opps!!!!!!!!")
 });
 
+//Middlewares
+app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(cors()); 
+
+//My Routes
+app.use("/api", authRoutes);
 
 
+//Starting a server
 const port = process.env.PORT || 8000;
 
 app.listen(port, ()=>{
