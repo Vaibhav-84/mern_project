@@ -3,7 +3,7 @@ const { ObjectId } = mongoose.Schema;
 
 const ProductCartSchema = new mongoose.Schema({
   produce: {
-    type: ObjectIs,
+    type: ObjectId,
     ref: "Product",
   },
   name: String,
@@ -18,13 +18,13 @@ const OrderSchema = new mongoose.Schema(
     transaction_id: {},
     amount: { type: Number },
     address: String,
-    updated: Data,
+    updated: Date,
     user: {
       type: ObjectId,
       ref: "User",
     },
   },
-  { timestamps: True }
+  { timestamps: true }
 );
 
 const Order = mongoose.model("Order", OrderSchema);
