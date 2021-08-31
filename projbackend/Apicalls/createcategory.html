@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script>
+        var settings = {
+            "url": "http://localhost:8000/api/category/create/612e1fbfa4b45634b0996dff",
+            "method": "POST",
+            "timeout": 0,
+            "headers": {
+                "Content-Type": "application/json",
+                "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJlMWZiZmE0YjQ1NjM0YjA5OTZkZmYiLCJpYXQiOjE2MzA0MTYxMDN9.91uWLBqgfxfHIYujNlTEY3h2yp4xkaWX_5umlnB9i3U",
+                "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJlMTBlYmMwODc1NTI3ZWM5ZDNmZDIiLCJpYXQiOjE2MzA0MDk2Nzd9.Mn5cCZqjm9u7PaaRw7Atwg4LLgckrUI4XFYiJEa3-aI"
+            },
+            "data": JSON.stringify({
+                "name": "Summern"
+            }),
+        };
+
+        $.ajax(settings).done(function (response) {
+            console.log(response);
+        });
+</script>
+</html>

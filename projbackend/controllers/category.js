@@ -13,7 +13,7 @@ exports.getCategoryById = (req, res, next, id) =>{
 };
 
 exports.createCategory = (req, res) =>{
-    console.log("BODY IS: ",req);
+    console.log("BODY IS: ",req.body);
     const category = new Category(req.body);
     category.save((err, category)=>{
         if (err){
@@ -40,6 +40,7 @@ exports.getAllCategory = (req, res)=>{
 }
 
 exports.updateCategory = (req, res)=>{
+    console.log("Update IS: ",req.body);
     const category = req.category;
     category.name = req.body.name;
 

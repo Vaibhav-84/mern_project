@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>
+<script>
+        var settings = {
+        "url": "http://localhost:8000/api/category/612e213b532c9e22688ce5da/612e1fbfa4b45634b0996dff",
+        "method": "PUT",
+        "timeout": 0,
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJlMWZiZmE0YjQ1NjM0YjA5OTZkZmYiLCJpYXQiOjE2MzA0MTUxNDV9.2hre689SjNX43bBdIDpJ6BbNvakaKKG01ZmP4BLAk9U",
+            "Cookie": "token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MTJlMWZiZmE0YjQ1NjM0YjA5OTZkZmYiLCJpYXQiOjE2MzA0MTQ2MjJ9.saDg7e9Q1g7V-mcXgCAM6P1UOv3tJiMFRutyiIGkPSY"
+        },
+        "data": JSON.stringify({
+            "name": "Summer ts"
+        }),
+        };
+
+        $.ajax(settings).done(function (response) {
+        console.log(response);
+        });
+</script>
+</html>
